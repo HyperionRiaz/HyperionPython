@@ -1,0 +1,46 @@
+Hi Edward,
+ 
+Apologies for the delay from my side.
+ 
+As a first step in determining a possible fit for the Software Development Engineer position at our Cape Town Development Centre, please complete the following task and return the results to me once completed (preferably in the next 2 days).
+ 
+Write a program to solve the following problem. Your program must accept two filenames as command-line parameters. These files will contain 7-bit ASCII text, and each line may consist of an IP address, followed by a colon, followed by a comma-separated list of numbers. The two files should be joined on IP address and the numbers from each file should be appended and returned, sorted and without duplicates.
+The results should be written to stdout as the IP address followed by a colon, followed by a comma separated list of the numbers.
+ 
+For example, file1:
+1.2.3.4: 1,3,4
+1.2.3.5: 9,8,7,6
+ 
+And file2: 
+1.2.3.4: 4,5,6
+1.2.3.6: 1,1,1
+ 
+Your program should print:
+1.2.3.4: 1,3,4,5,6
+1.2.3.5: 6,7,8,9
+1.2.3.6: 1
+ 
+Your program should handle errors, including malformed input, appropriately and should be of a sufficient quality that it can run on a production, linux system.
+ 
+Please don’t send executable code, as this will be blocked by our mail-servers. Instead zip your code and provide a download location (e.g. dropbox url, S3 bucket URL, ftp/http url) where we can download your code from. If you send as an attachment, you could try to rename it (to something like x.zip.not) so it doesn’t get stripped off by our AV software. Your code should be of a sufficient quality that it can run on a live business-critical system.
+ 
+Please familiarize yourself with what AWS does (aws.amazon.com) and the Amazon Leadership Principles, and also let us know if you have any other interviews scheduled/offers pending, so we can expedite the process on our end to accommodate your time line.
+ 
+Also, please sign and return the attached NDA.
+ 
+Kind regards,
+ 
+Riza
+ 
+From: Schmidt, Elzbeth 
+Sent: Sunday, March 10, 2013 6:57 PM
+To: Edward Chisoro
+Cc: Jacobs, Riza; Schmidt, Elzbeth
+Subject: RE: Meeting you at PyCon
+ 
+Hi Edward,
+ 
+Cool.  Yes, all our internships are for Software Development roles.  Riza (cc’d here) will be in contact to coordinate the coding challenge.  Shout if you have any questions throughout the process.
+ 
+Cheers,
+Elzbeth

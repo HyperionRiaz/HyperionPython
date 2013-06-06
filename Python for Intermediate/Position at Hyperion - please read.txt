@@ -1,0 +1,28 @@
+When filling out our application form you indicated that you would like to tutor students.
+
+At Hyperion we have three ranks:
+Trial Developer
+Associate Developer
+Developer
+
+Only Associate Developers and Developers can be paid for working on projects though many do not ask for payment.
+
+To become an Associate Developer you must first be a Trial Developer for a period of two weeks where you are given a project to complete.
+After the two week period is up, our Developers vote on whether you should be promoted to Associate Developer or not.
+
+Associate Developers must attend a Skype meeting once every two weeks.
+
+Associate Developers may be promoted to Developers if they show continual commitment to Hyperion. 
+
+== Steps to become a Developer at Hyperion ==
+
+Tasks 1-4 must be completed. 
+The form at http://www.rmoola.com/devapp.htm must be completed.
+Within two working days of filling out the form you will be contacted and an interview with one of our Developers will be arranged.
+If succesful, you will enter into a two week long trial period at Hyperion and given a specific project to work on that fits your skillset.
+During this time you will have regular contact with a Developer for assistance and advice.
+After the two week period completion of the project is expected. Promotion to Associate Developer will then be decided.
+
+
+
+

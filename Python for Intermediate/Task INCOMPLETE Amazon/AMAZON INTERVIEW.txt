@@ -1,0 +1,93 @@
+Write a function which takes two root nodes of a binary tree as parameters and returns true if the content of those trees is identical and false otherwise
+a:  9
+   / \
+  5   11
+ / \
+2   6
+b:  6
+   / \
+  5   9
+ /     \
+2       11
+Here, isTreeContentEqual(a, b) would return true. Your goal is to find a solution with the best algorithmic complexity possible.
+
+HashSet<Integer> values1 = new HashSet<Integer>;
+HashSet<Integer> values2 = new HashSet<Integer>; 
+
+//Calling for first tree
+walk(root1, 1);
+
+//Calling for second tree
+walk(root2, 2); 
+
+public static void walk (Node n, int num) //O(n) complexity
+{
+
+    if (node.childCount == 0)
+    {
+        if (num == 1)
+        {      
+            values1.put(n.value);          
+        }
+        else if (num == 2)
+        {
+            values2.put(n.value);
+        }
+        
+              
+    }
+    else
+    {
+    
+        if (num == 1)
+        {      
+            values1.put(n.value);          
+        }
+        else if (num == 2)
+        {
+            values2.put(n.value);
+        }
+      
+      walk(node.left, num)
+      walk(node.right, num) 
+      
+      
+    }
+
+
+}
+
+//Knows that two hash sets are values1 and values2
+public static boolean compare()
+{
+    
+    Set keySet1 = values1.keySet();
+    Set keySet2 = values2.keySet();
+    
+    //Length check
+    
+    if (keySet1.length != keySet2.length) //Best case: O(1) 
+    {
+    
+        return false; 
+    }
+    else 
+    {
+          
+        for (int i = 0; i < keySet1.length; i++) 
+        {
+            // Assuming keySet contains array of keys from the hashsets
+            if (values1.contains(keySet2[i]) == false)) //O(n) 
+            {
+                return false;
+            }
+           
+        }
+        
+        return true; 
+
+      
+    }
+        
+
+}

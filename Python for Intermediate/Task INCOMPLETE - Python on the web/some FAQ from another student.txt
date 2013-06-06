@@ -1,0 +1,18 @@
+1. Nonlin is not always 0, where does the value come from?
+
+2. Values in the json file do not correspond to the values in the csv file. 
+eg. row 10 column 10 in the csv file is -1 in the json file its corresponding entry is {"source":10,"target":10,"value":0,"nonlin":0}
+row 10 column 9 in the csv file is 0.74 in the json file its corresponding entry is {"source":10,"target":9,"value":3.08,"nonlin":0.0690799772994}
+
+???  
+
+
+=== Answers ==
+
+1.) Just set nonlin as 0 for every 'link' entry. so you can just print out nonlin:"0" . 
+
+2.) Ah forgot to mention....on diagonal links (ie source number same as target number), just print out a value of 0 instead of -1
+
+	some of the values are scaled by a factor. the factor is meant ot be 4. this is unimportant, just print out the value given in the csv file.
+	
+so the structure of your json file must be exactly the same as the given adj3.json, barring the value and nonlin. as long as the correct links are generating coressponding lines in the .json file

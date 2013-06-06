@@ -1,0 +1,114 @@
+== Task 3 ==
+
+Read this textfile. This is your final Python training task!
+The overall aim is to write a python program that takes output.csv in as an input. It then produces adj3.json by looping through
+the output.csv file. You will need to use additional python modules and use the python docs. If you have any questions, please ask
+I will be editing this text file. to try clarify certain things.
+
+Task 2 is a previous project that was required for code written for the South African Medical Research Council on an Amazon
+web server. So if you have the ability to solve this, you will be able to handle new projects with ease. 
+
+If you are comfortable with now learning more advaced Python, please continue with this otherwise an easier task can be provided on request.
+
+
+== Main specification of program == 
+Take the output.csv file as input as generate the adj3.json file.
+This must be a general algorithm to work with any csv file of the same format as output.csv
+
+== The input to the program ==
+output.csv is a file that is a csv filetype. csv = 'comma seperated values'
+
+the first row of the csv file are variable names
+all the rows below are values
+
+imagine if the first row was copied down the left side of the file like
+a 2 dimensional array
+
+so for example
+
+Atbat	Hits 	Homer
+-1     0.94		0.34
+
+would actually be
+
+		Atbat 	 Hits	 Homer
+Atbat  -1        0.94     0.34
+
+Hits   <the 2nd row of the csvfile .. >
+
+Homer <the third row>
+
+ie it forms a 2 dimensional array which is known as a MATRIX (the same one used in maths)
+
+position (1,1) ... (2,2) are all elements on the diagonal of the matrix. Each cell is a value that is the CORRELATION between variable i and j at the cell (i, j)
+
+hence cell (i,i) is the correlation between a variable and itself which is always perfect ie, -1
+
+
+It is not crucial that you understand the maths.
+
+==The Output ==
+the task is to create a .json file of exactly the format as adj3 given any csv file of this format.
+
+==The method==
+all you are doing is looping through the csv file. 
+
+the .json file has 2 parts : nodes and edges. open it and look
+
+we are making a graph seen here: http://mbostock.github.com/d3/ex/force.html
+
+the circles on the graph are called 'nodes'. lines between nodes are called 'edges'. each node represents a variable from the matrix in the csv file. eg Atbat , hits, homer are all variables. the cell (1,2) is the correlation between Atbat and Hits which is 0.94. (1,2) means row 1 col 2. 
+
+ each cell (except the diagonals) represents ONE EDGE on the graph
+ie one connection between two variables. the value in the cell reflects the strength of the connection.
+
+the graph on that webpage cant understand a CSV file. it can only understand a json file. a json file is exactly the same as a text file. you can read and write to it using python very easily.
+
+the json file is divided into 2 parts, the first is NODES. for each variable in the csv file (ie the first row of the csv file), print the string that you see in the pattern in the json file ie "name:" <variable name" "group:0"} or whatever. you got to work out how the pattern goes. the syntax of the json file has to be EXACTLY CORRECT.
+
+the second part of the json file is the links. for each cell in the csv file that has a number in it, print the string "source:"<row of the cell>" "target:"<col of the cell" "value:" <value fo the cell> "nonlin:0"
+
+so 'group' and nonlin are always 0, they are not important
+then close the brackets and end the json file
+
+== Ideas to get started == 
+==========================================================
+to do this you will need to import the python module 'csv'
+
+import csv
+
+
+then you will have to use the csvreader method. google to see how to use it. pass in the file 'output.csv' into this method and it will automatically make a 2dimension list of all the data - easy!
+
+read the first line, that will give you a list of all the variable names. the delimiter is also defined in the reader method. remember from school that the delimter if the thing that seperates stuff and 
+its going to split things into an array whenever it seems the delimer. the delimiter in a comma seperated file (csv) is obviously ','
+
+now youll have a 1d array or list of all the variables. for each variable in the list, print the nodes:"..." statements to the json file
+
+
+you will also need to write a file using python, google how to do this. its really simple, one statement like file.write("newfile.json", "W")
+
+then file.write("your string")
+
+unlike java you an keep writing and it adds to the end of a file
+
+so file.write("A")
+file.write("B")
+
+will give you a file with "AB" in it. in Java the 2nd write statement overwrites everything in the file and you only get "B" in the file. This doesnt happen in python.
+
+remember to do file.close() after everyhing..
+
+
+remember it has to be generalised! good luck
+
+remember adj3.json is the answer and your generated json file should look exactly the same down to every ; and } 
+
+when you provide me with the .json file I will show you the graph you generated...
+
+
+
+
+
+
+
